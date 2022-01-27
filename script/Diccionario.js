@@ -1,4 +1,4 @@
-class Diccionario{
+export class Diccionario{
 
     constructor(){
         this._mapa = new Map;
@@ -9,6 +9,14 @@ class Diccionario{
             this._mapa.set(this._clavesYValores[index][0], this._clavesYValores[index][1]);
             this._mapaInverso.set(this._clavesYValores[index][1], this._clavesYValores[index][0]);
         };
+    }
+
+    get claves(){
+        return Array.from(this._mapa.keys());
+    }
+
+    get valores(){
+        return Array.from(this._mapaInverso.keys());
     }
 
     valorPorClave(clave){
