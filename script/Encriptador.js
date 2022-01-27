@@ -1,6 +1,6 @@
 import{Diccionario} from "./Diccionario.js";
 
-class Encriptador{
+export class Encriptador{
     constructor(){
         this._miDiccionario = new Diccionario;
     }
