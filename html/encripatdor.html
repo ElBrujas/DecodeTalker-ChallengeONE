@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>de(en)-coder</title>
+    <script defer src="../script/Controladores/encriptador-controlador.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -13,22 +14,23 @@
 
     <nav>
         <a href="../index.html">Inicio</a>
-        <a href="./desencriptador.html">Desencriptar</a>
         <a href="#">Encriptar</a>
+        <a href="./desencriptador.html">Desencriptar</a>
     </nav>
 
     <main>
+        <p>Prueba a encriptar un mensaje aqui, mantendremos tus secretos a salvo.</p>
         <div>
-            <p>Prueba a encriptar un mensaje aqui, mantendremos tus secretos a salvo.</p>
-            <p class="mensaje-alerta"> El texto no puede contener mayusculas ni caracteres especiales!!!</p>
+            <p id="mensaje-alerta"> El texto no puede estar en blanco, ni contener mayusculas o caracteres especiales!!!</p>
             <label for="area-escritura">Ingrese aqui su mensaje</label>
             <input type="text" id="area-escritura">
-            <button>Enviar</button>
+            <button id="boton-enviar">Enviar</button>
+            <button id="boton-limpiar"> Limpiar </button>
         </div>
         <div>
-            <label for="area-salida">Tu mensaje codificado es::</label>
-            <input type="text" id="area-salida"></input>
-            <button>Copiar</button>
+            <label for="area-salida">Tu mensaje codificado es:</label>
+            <input type="text" id="area-salida" disabled></input>
+            <button id="boton-copiar">Copiar</button>
         </div>
     </main>
 

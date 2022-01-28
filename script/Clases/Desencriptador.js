@@ -19,6 +19,3 @@ export class Desencriptador{
         return mensajeActual;
     }
 }
-
-let unEncriptador = new Desencriptador;
-console.log(unEncriptador.desencriptarMensaje("fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"));

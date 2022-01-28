@@ -1,10 +1,9 @@
-class Validador{
+export class Validador{
     constructor(){
-        this.reglasDeFiltro = new RegExp ("[^a-z0-9-\\s]");
+        this.reglasDeFiltro = new RegExp ("[^a-z0-9-\\s-ñ]");
     }
 
     validarTexto(unTexto){
-        console.log(this.reglasDeFiltro);
-        return !this.reglasDeFiltro.test(unTexto);
+        return ((!this.reglasDeFiltro.test(unTexto)) && (unTexto != ""));
     }
 }
