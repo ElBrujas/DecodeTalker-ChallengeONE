@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/Controladores/desencriptador-controlador.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/logo.png"/>
     <title>de(en)-coder</title>
 </head>
 <body>
     <header>
+        <img class="logo" src="../imagenes/logo.png" alt="logo-pagina">
         <h1>DEC(EN)-coder</h1>
     </header>
 
@@ -19,18 +22,24 @@
     </nav>
 
     <main>
-        <p>Ahora puedes desencriptar tu mensaje, es hora de ver lo que dice ese mensaje secreto!!</p>
-        <div>
-            <p id="mensaje-alerta"> El texto no puede estar en blanco, ni contener mayusculas o caracteres especiales!!!</p>
-            <label for="area-escritura">Ingrese aqui su mensaje encriptado</label>
-            <input type="text" id="area-escritura">
-            <button id="boton-enviar">Enviar</button>
-            <button id="boton-limpiar"> Limpiar </button>
-        </div>
-        <div>
-            <label for="area-salida">El mensaje secreto es:</label>
-            <input type="text" id="area-salida" disabled></input>
-            <button id="boton-copiar">Copiar</button>
+        <div class="container">
+            <p>Ahora puedes desencriptar tu mensaje, es hora de ver lo que dice ese mensaje secreto!!</p>
+            <div class="flex-text-area">
+                <div class="area-texto">
+                    <p id="mensaje-alerta" class="hidden"> El texto no puede estar en blanco, ni contener mayusculas o caracteres especiales!!!</p>
+                    <label for="area-escritura">Ingrese aqui su mensaje encriptado</label>
+                    <textarea name="area-escritura" id="area-escritura" cols="30" rows="10"></textarea>
+                    <div class="flex-button">
+                        <button id="boton-enviar">Enviar</button>
+                        <button id="boton-limpiar"> Limpiar </button>
+                    </div>
+                </div>
+                <div class="area-texto">
+                    <label for="area-salida">El mensaje secreto es:</label>
+                    <textarea name="area-salida" id="area-salida" cols="30" rows="10"></textarea>
+                    <button id="boton-copiar">Copiar</button>
+                </div>
+            </div>
         </div>
     </main>
 

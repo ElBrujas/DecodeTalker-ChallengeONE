@@ -18,12 +18,18 @@ function limpiarAreas(){
 
 function alertaMensajeNoValido(){
     let mensajeAlerta = document.getElementById("mensaje-alerta");
-    mensajeAlerta.style = "color: red"; //provicional hasta hacer el css
+    mensajeAlerta.classList.remove("hidden");
+}
+
+function esconderMensaje(){
+    let mensajeAlerta = document.getElementById("mensaje-alerta");
+    mensajeAlerta.classList.add("hidden");
 }
 
 function encriptarMensaje(){
     let mensajeEntrada = entradaTexto.value;
     if(unValidador.validarTexto(mensajeEntrada)){
+        esconderMensaje();
        salidaTexto.value = unDesencriptador.desencriptarMensaje(mensajeEntrada);
     }
     else{

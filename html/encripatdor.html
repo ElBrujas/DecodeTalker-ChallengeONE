@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>de(en)-coder</title>
     <script defer src="../script/Controladores/encriptador-controlador.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/logo.png"/>
 </head>
 <body>
     <header>
+        <img class="logo" src="../imagenes/logo.png" alt="logo-pagina">
         <h1>DEC(EN)-coder</h1>
     </header>
 
@@ -19,18 +22,24 @@
     </nav>
 
     <main>
-        <p>Prueba a encriptar un mensaje aqui, mantendremos tus secretos a salvo.</p>
-        <div>
-            <p id="mensaje-alerta"> El texto no puede estar en blanco, ni contener mayusculas o caracteres especiales!!!</p>
-            <label for="area-escritura">Ingrese aqui su mensaje</label>
-            <input type="text" id="area-escritura">
-            <button id="boton-enviar">Enviar</button>
-            <button id="boton-limpiar"> Limpiar </button>
-        </div>
-        <div>
-            <label for="area-salida">Tu mensaje codificado es:</label>
-            <input type="text" id="area-salida" disabled></input>
-            <button id="boton-copiar">Copiar</button>
+        <div class="container">
+            <p>Prueba a encriptar un mensaje aqui, mantendremos tus secretos a salvo.</p>
+            <div class="flex-text-area">
+                <div class="area-texto">
+                    <p id="mensaje-alerta" class="hidden"> El texto no puede estar en blanco, ni contener mayusculas o caracteres especiales!!!</p>
+                    <label for="area-escritura">Ingrese aqui su mensaje</label>
+                    <textarea name="area-escritura" id="area-escritura" cols="30" rows="10"></textarea>
+                    <div class="flex-button">
+                        <button id="boton-enviar">Enviar</button>
+                        <button id="boton-limpiar"> Limpiar </button>
+                    </div>
+                </div>
+                <div class="area-texto">
+                    <label for="area-salida">Tu mensaje codificado es:</label>
+                    <textarea name="area-salida" id="area-salida" cols="30" rows="10"></textarea>
+                    <button id="boton-copiar">Copiar</button>
+                </div>
+            </div>
         </div>
     </main>
 
